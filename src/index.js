@@ -77,7 +77,7 @@ import Board from './Board/index'
             const desc = move ? 'Go to move #' + move : 'Go to game start';
             const moveMsg = move !== 0 ? `MOVE : col: ${step.pickedSquareCol} row: ${step.pickedSquareRow}` : `Empty`;
             return (
-                <li key={move}>
+                <li key={move} className={this.state.stepNumber === move ? 'bold' : null}>
                     <button onClick={() => this.jumpTo(move)}>
                         {desc}
                     </button>
